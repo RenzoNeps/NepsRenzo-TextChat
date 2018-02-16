@@ -9,31 +9,30 @@ import java.util.ArrayList;
  */
 public class NewsFeed
 {
-    private ArrayList<MessagePost> messages;
-    private ArrayList<PhotoPost> photos;
+    private ArrayList<Post> posts;
 
     /**
      * Constructor for objects of class NewsFeed
      */
     public NewsFeed()
     {
-        photos = new ArrayList<PhotoPost>();
-        messages = new ArrayList<MessagePost>();
+        posts = new ArrayList<Post>();
     }
 
     /**
-     * Adds a message to MessagePost
+     * Adds a message to Post
      */
-    public void addMessagePost(MessagePost mp)
+    public void addPost(Post post)
     {
-        messages.add(mp);
+        posts.add(post);
     }
     
-    /**
-     * Adds a message to PhotoPost
-     */
-    public void addPhotoPost(PhotoPost pp)
+    public void display()
     {
-        photos.add(pp);
+        for (Post post : posts)
+        {
+            post.display();
+            System.out.print("\r\r");
+        }
     }
 }

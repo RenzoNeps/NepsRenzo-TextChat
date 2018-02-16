@@ -5,29 +5,33 @@
  * @author Renzo Neps
  * @version 2/14/2018
  */
-public class PhotoPost
+public class PhotoPost extends Post
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private String filename;
+    private String caption;
+    
     /**
      * Constructor for objects of class PhotoPost
      */
-    public PhotoPost()
+    public PhotoPost(String author,String filename, String caption)
     {
-        // initialise instance variables
-        x = 0;
+        super(author);
+        this.filename = filename;
+        this.caption = caption;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Return filename
      */
-    public int sampleMethod(int y)
+    public String getImageFile()
     {
-        // put your code here
-        return x + y;
+        return filename;
+    }
+    
+    public void display()
+    {
+        super.display();
+        System.out.println("\t[" + filename + "]");
+        System.out.println("\t" + caption);
     }
 }
