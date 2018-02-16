@@ -31,6 +31,14 @@ public class NewsFeed
     {
         for (Post post : posts)
         {
+            /*if(post.instanceOf(PhotoPost))
+            {
+                PhotoPost pp = (PhotoPost) post;
+            }
+            else
+            {
+                MessagePost mp = (MessagePost) post;
+            }*/
             post.display();
             System.out.print("\r\r");
         }

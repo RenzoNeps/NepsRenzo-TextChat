@@ -64,7 +64,6 @@ public class Post
     
     public void display()
     {
-        System.out.println(getUsername() + " posted:");
         System.out.println(getTimeStamp());
         
         if (likes > 0)

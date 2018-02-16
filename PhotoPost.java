@@ -31,6 +31,7 @@ public class PhotoPost extends Post
     public void display()
     {
         super.display();
+        System.out.println(getUsername() + " posted a photo:");
         System.out.println("\t[" + filename + "]");
         System.out.println("\t" + caption);
     }

@@ -29,6 +29,7 @@ public class MessagePost extends Post
     public void display()
     {
         super.display();
+        System.out.println(getUsername() + " posted a message:");
         System.out.println("\t" + message);
     }
 }
